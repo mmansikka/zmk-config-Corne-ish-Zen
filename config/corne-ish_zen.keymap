@@ -13,17 +13,6 @@
 #define SHFT_H &bhm RIGHT_SHIFT H
 
 / {
-        behaviors {
-                bhm: balanced_homerow_mods {       
-                        compatible = "zmk,behavior-hold-tap";          
-                        label = "HRM";     
-                        #binding-cells = <2>;          
-                        tapping-term-ms = <180>;    // <---[[moderate duration]]           
-                        quick-tap-ms = <0>;
-                        flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
-                };
-        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -71,4 +60,16 @@
                         >;
                 };
         };
+        behaviors {
+                bhm: balanced_homerow_mods {       
+                        compatible = "zmk,behavior-hold-tap";          
+                        label = "HRM";     
+                        #binding-cells = <2>;          
+                        tapping-term-ms = <180>;    // <---[[moderate duration]]           
+                        quick-tap-ms = <0>;
+                        flavor = "balanced";
+                        bindings = <&kp>, <&kp>;
+                };
+        };
 };
+
