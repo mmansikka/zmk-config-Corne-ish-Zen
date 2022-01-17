@@ -14,7 +14,7 @@
 
 / {
         keymap {
-                compatible = "zmk,keymap,behavior-hold-tap";
+                compatible = "zmk,keymap";
 
                 default_layer {
                         label = "DVORAK";
@@ -63,7 +63,7 @@
         behaviors {
                 bhm: balanced_homerow_mods {       
                         compatible = "zmk,behavior-hold-tap";          
-                        label = "HRM";     
+                        #label = "HRM";     
                         #binding-cells = <2>;          
                         tapping-term-ms = <180>;    // <---[[moderate duration]]           
                         quick-tap-ms = <0>;
