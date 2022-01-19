@@ -155,7 +155,7 @@
         &kp LGUI &bh 1 HOME &mt LCTRL RET   &kp SPACE &bh 2 END &mt RALT LG(V)
                         >;
 
-		label = "DVORAK";
+		label = "BOSS";
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
