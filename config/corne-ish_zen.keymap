@@ -122,6 +122,17 @@
 //                        >;
 //                };
 
+// homerow homerow homerow mods
+#define LGUI_A &hm LGUI A
+#define LALT_O &hm LALT O
+#define LCTRL &hm LCTRL E
+#define LSHFT_U &hm LSFT U
+#define RSHFT_H &hm RSFT H
+#define RCTRL_T &hm RCTRL T
+#define RALT_N &hm RALT N
+#define RGUI_S &hm RGUI S
+
+// LT3ESC,  LT1SPC,  LT2TAB,  LT5ENT,  LT4BSPC, LT6DEL,
 
 / {
         keymap {
@@ -129,14 +140,14 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | 
-// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | 
+// |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  |
+// |  A  |  O  |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |
+// |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  |
 //             | GUI | LWR | ENT |   | SPC | RSE  | ALT |
                         bindings = <
-        &kp SQT  &kp COMMA &kp DOT  &kp P  &kp Y     &kp F   &kp G  &kp C &kp R &kp L
-        &kp A    &kp O     &kp E    &kp U  &kp I     &kp D   &kp H  &kp T &kp N &kp S
-        &kp SEMI &kp Q     &kp J    &kp K  &kp X     &kp B   &kp M  &kp W &kp V &kp Z
+     &none   &kp SQT  &kp COMMA &kp DOT  &kp P  &kp Y     &kp F   &kp G  &kp C &kp R &kp L &none
+     &none   &kp A   &kp O     &kp E    &kp U  &kp I     &kp D   &kp H  &kp T &kp N &kp S &none
+     &none   &kp SEMI &kp Q     &kp J    &kp K  &kp X     &kp B   &kp M  &kp W &kp V &kp Z &none
 
 //&kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P &kp BSPC
 //&kp LC(C)   &bh 3 A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L   &kp SQT &none
@@ -144,7 +155,7 @@
         &kp LGUI &bh 1 HOME &mt LCTRL RET   &kp SPACE &bh 2 END &mt RALT LG(V)
                         >;
 
-		label = "BOSS";
+		label = "DVORAK";
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
