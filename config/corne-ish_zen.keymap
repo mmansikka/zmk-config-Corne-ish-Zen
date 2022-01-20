@@ -13,7 +13,7 @@
 #define COMBO_TIMEOUT 60
 
 #define DEFAULT 0
-#define NAV     1
+#define NAVIG   1
 #define MOUSE   2
 #define MEDIA   3
 #define NUM     4
@@ -167,5 +167,6 @@
                	        &kp LC(LA(LSHFT)) &trans       &mt RALT RET      &mt LCTRL F1  &kp N0  &mt LSHFT DOT
                         >;
 		label = "Numbers";
+                };
         };
 };
