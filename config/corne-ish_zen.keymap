@@ -154,19 +154,19 @@
                         >;
 		label = "DVORAK";
                 };
-                lower_layer {
+                navig_layer {
 // -----------------------------------------------------------------------------------------
-// | BT1 | BT2 | BT3 | BT4 | BT5 |   |  7  |  8  |  9  | DEL | BSPC|
-// |  F2 |  F3 |  F4 |  F5 |  F6 |   |  4  |  5  |  6  | PGU | PGD |
-// |  F7 |  F8 |  F10|  F11|  F12|   |  1  |  2  |  3  | BSL | CTRL/ENT |
-//                    | CAS |     | Alt;Ent |   | Ctrl;F1 |  0  | shift;. |
+// |    |    |    |    |    ||---||UNDO |REDO|CUT  |COPY |PASTE|
+// | GUI| ALT|CTRL|SFT |    ||---||     |LEFT|DOWN |UP   |RIGHT|
+// |    |    |    |    |    ||---||     |HOME|PG_DN|PG_UP|END|
+//           |    |    |    ||---||ENTER|BSPC|DEL  | 
                         bindings = <
-&none   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR     &kp PG_UP &kp N7 &kp N8 &kp N9 &kp BSPC  &none
-&none   &kp F2       &hm LCTRL F3  &hm LSHFT F4  &hm LALT F5  &kp F6         &kp PG_DN &kp N4 &kp N5 &kp N6 &kp BSLH &none
-&none   &kp F7       &kp F8       &kp F10      &kp F11      &kp F12        &kp RET &kp N1 &kp N2 &kp N3  &kp LC(RET) &none
-               	        &kp LC(LA(LSHFT)) &trans       &mt RALT RET      &mt LCTRL F1  &kp N0  &mt LSHFT DOT
+&none &none    &none    &none     &none    &none     &kp K_UNDO &kp K_REDO &kp K_CUT &kp K_COPY &kp K_PASTE &none
+&none &kp LGUI &kp LALT &kp LCTRL &kp LSFT &none     &none      &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &none
+&none &none    &none    &none     &none    &none     &none      &kp HOME   &kp PG_DN &kp PG_UP  &kp END     &none
+                        &none     &trans   &none     &kp ENTER    &kp BSPC   &kp DEL
                         >;
-		label = "Numbers";
+		label = "NAVIG";
                 };
         };
 };
