@@ -154,7 +154,7 @@
                         >;
 		label = "DVORAK";
                 };
-                moving_layer {
+                lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  |
 // |  A  |  O  |  E  |  U  |  I  |   |  D  |  H   |  T  |  N  |  S  |
@@ -166,7 +166,7 @@
 &none &kp SEMI   &kp Q      &kp J       &kp K      &kp X     &kp B &kp M      &kp W       &kp V      &kp Z      &none
                  &trans   &trans   &trans     &kp ENTER  &kp BSPC  &kp DEL
                         >;
-		label = "MOVE";
+		label = "Numbers";
                 };
         };
 };
