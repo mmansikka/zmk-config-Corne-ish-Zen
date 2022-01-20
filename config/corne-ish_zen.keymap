@@ -14,11 +14,11 @@
 
 #define DEFAULT 0
 #define NAV     1
-#define MOUSE   2
-#define MEDIA   3
-#define NUM     4
-#define SYMB    5
-#define FUN     6
+//#define MOUSE   2
+//#define MEDIA   3
+//#define NUM     4
+//#define SYMB    5
+//#define FUN     6
 // {
 //    combos {
 //        compatible = "zmk,combos";
@@ -139,8 +139,6 @@
 / {
         keymap {
                 compatible = "zmk,keymap";
-
-
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  |
@@ -153,7 +151,6 @@
 &none &kp SEMI   &kp Q      &kp J       &kp K      &kp X     &kp B &kp M      &kp W       &kp V      &kp Z      &none
                      &bh 3 ESQ   &bh 1 SPC     &bh 2 TAB     &bh 5 ENT  &bh 4 BSPC  &bh 6 DEL
                         >;
-
 		label = "Dvorak";
                 };
 
@@ -166,89 +163,11 @@
 //                    | CAS |     | Alt;Ent |   | Ctrl;F1 |  0  | shift;. |
                         bindings = <
 &none &none    &none    &none     &none    &none     &kp K_UNDO &kp K_REDO &kp K_CUT &kp K_COPY &kp K_PASTE &none
-&none &kp LGUI &kp LALT &kp LCTRL &kp LSFT &none     &none      &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT &none
-&none &none    &none    &none     &none    &none     &none      &kp HOME   &kp PG_DN &kp PG_UP  &kp END   &none
+&none &kp LGUI &kp LALT &kp LCTRL &kp LSFT &none     &none      &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &none
+&none &none    &none    &none     &none    &none     &none      &kp HOME   &kp PG_DN &kp PG_UP  &kp END     &none
                         &none     &trans   &none     &kp ENT    &kp BSPC   &kp DEL
                         >;
 		label = "Nav";
-                };
-
-
-                mouse_layer {
-// -----------------------------------------------------------------------------------------
-// |    |    |    |    |    ||---||    |    |    |    |    |
-// |    |    |    |    |    ||---||    |    |    |    |    |
-// |    |    |    |    |    ||---||    |    |    |    |    |
-//           |    |    |    ||---||    |    |    |    |    |
-                       bindings = <
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-                  &none &none &none     &none &none &none
-                        >;
-		label = "Mouse";
-                };
-
-
-                media_layer {
-// -----------------------------------------------------------------------------------------
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-//           |    |    |    ||   ||    |    |    |    |    |
-                       bindings = <
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-                  &none &none &none     &none &none &none
-                        >;
-		label = "Media";
-                };
-
-
-                num_layer {
-// -----------------------------------------------------------------------------------------
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-//           |    |    |    ||   ||    |    |    |    |    |
-                       bindings = <
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-                  &none &none &none     &none &none &none
-                        >;
-		label = "Num";
-                };
-
-                symb_layer {
-// -----------------------------------------------------------------------------------------
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-//           |    |    |    ||   ||    |    |    |    |    |
-                       bindings = <
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-                  &none &none &none     &none &none &none
-                        >;
-		label = "Symb";
-                };
-
-                fun_layer {
-// -----------------------------------------------------------------------------------------
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-//           |    |    |    ||   ||    |    |    |    |    |
-                       bindings = <
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-                  &none &none &none     &none &none &none
-                        >;
-		label = "Func";
                 };
         };
 };
