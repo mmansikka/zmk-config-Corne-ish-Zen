@@ -14,11 +14,11 @@
 
 #define DEFAULT 0
 #define NAV     1
-//#define MOUSE   2
-//#define MEDIA   3
-//#define NUM     4
-//#define SYMB    5
-//#define FUN     6
+#define MOUSE   2
+#define MEDIA   3
+#define NUM     4
+#define SYMB    5
+#define FUN     6
 // {
 //    combos {
 //        compatible = "zmk,combos";
@@ -149,7 +149,7 @@
 &none &kp SQT    &kp COMMA  &kp DOT     &kp P      &kp Y     &kp F &kp G      &kp C       &kp R      &kp L      &none
 &none &hm LGUI A &hm LALT O &hm LCTRL E &hm LSFT U &kp I     &kp D &hm RSFT H &hm RCTRL T &hm RALT N &hm RGUI S &none
 &none &kp SEMI   &kp Q      &kp J       &kp K      &kp X     &kp B &kp M      &kp W       &kp V      &kp Z      &none
-                     &bh NAV ESC   &bh NAV SPACE     &bh NAV TAB     &bh NAV ENTER  &bh NAV BSPC  &bh NAV DEL
+                 &bh NAV ESC   &bh NAV SPACE   &bh MOUSE TAB     &bh NAV ENTER  &bh NAV BSPC  &bh NAV DEL
                         >;
 		label = "Dvorak";
                 };
@@ -157,10 +157,10 @@
 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// | BT1 | BT2 | BT3 | BT4 | BT5 |   |  7  |  8  |  9  | DEL | BSPC|
-// |  F2 |  F3 |  F4 |  F5 |  F6 |   |  4  |  5  |  6  | PGU | PGD |
-// |  F7 |  F8 |  F10|  F11|  F12|   |  1  |  2  |  3  | BSL | CTRL/ENT |
-//                    | CAS |     | Alt;Ent |   | Ctrl;F1 |  0  | shift;. |
+// |    |    |    |    |    ||---||UNDO |REDO|CUT  |COPY |PASTE|
+// | GUI| ALT|CTRL|SFT |    ||---||     |LEFT|DOWN |UP   |RIGHT|
+// |    |    |    |    |    ||---||     |HOME|PG_DN|PG_UP|END|
+//           |    |    |    ||---||ENTER|BSPC|DEL  | 
                         bindings = <
 &none &none    &none    &none     &none    &none     &kp K_UNDO &kp K_REDO &kp K_CUT &kp K_COPY &kp K_PASTE &none
 &none &kp LGUI &kp LALT &kp LCTRL &kp LSFT &none     &none      &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &none
@@ -168,6 +168,84 @@
                         &none     &trans   &none     &kp ENTER    &kp BSPC   &kp DEL
                         >;
 		label = "Nav";
+                };
+
+                mouse_layer {
+// -----------------------------------------------------------------------------------------
+// |    |    |    |    |    ||---||    |    |    |    |    |
+// | GUI| ALT|CTRL|SFT |    ||---||    |    |    |    |    |
+// |    |    |    |    |    ||---||    |    |    |    |    |
+//           |    |    |    ||---||    |    |    |    |    |
+                       bindings = <
+&none &none &none &none &none &none                 &none &none &none &none &none &none
+&none &kp LGUI &kp LALT &kp LCTRL &kp LSFT &none    &none &none &none &none &none &none
+&none &none &none &none &none &none                 &none &none &none &none &none &none
+                  &none &none &trans                &none &none &none
+                        >;
+		label = "Mouse";
+                };
+
+
+                media_layer {
+// -----------------------------------------------------------------------------------------
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+// | GUI| ALT|CTRL|SFT |    ||---||    |    |    |    |    |
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+//           |    |    |    ||   ||    |    |    |    |    |
+                       bindings = <
+&none &none &none &none &none &none                   &none &none &none &none &none &none
+&none &kp LGUI &kp LALT &kp LCTRL &kp LSFT &none      &none &none &none &none &none &none
+&none &none &none &none &none &none                   &none &none &none &none &none &none
+                  &none &none &none                   &none &none &none
+                        >;
+		label = "Media";
+                };
+
+                num_layer {
+// -----------------------------------------------------------------------------------------
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+// |    |    |    |    |    ||   ||    |SFT |CTRL|ALT |GUI |
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+//           |    |    |    ||   ||    |    |    |    |    |
+                       bindings = <
+&none &none &none &none &none &none     &none &none &none &none &none &none
+&none &none &none &none &none &none     &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &none
+&none &none &none &none &none &none     &none &none &none &none &none &none
+                  &none &none &none     &none &none &none
+                        >;
+		label = "Num";
+                };
+
+
+                symb_layer {
+// -----------------------------------------------------------------------------------------
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+// |    |    |    |    |    ||   ||    |SFT |CTRL|ALT |GUI |
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+//           |    |    |    ||   ||    |    |    |    |    |
+                       bindings = <
+&none &none &none &none &none &none     &none &none &none &none &none &none
+&none &none &none &none &none &none     &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &none
+&none &none &none &none &none &none     &none &none &none &none &none &none
+                  &none &none &none     &none &none &none
+                        >;
+		label = "Symb";
+                };
+
+
+                fun_layer {
+// -----------------------------------------------------------------------------------------
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+// |    |    |    |    |    ||   ||    |SFT |CTRL|ALT |GUI |
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+//           |    |    |    ||   ||    |    |    |    |    |
+                       bindings = <
+&none &none &none &none &none &none     &none &none &none &none &none &none
+&none &none &none &none &none &none     &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &none
+&none &none &none &none &none &none     &none &none &none &none &none &none
+                  &none &none &none     &none &none &none
+                        >;
+		label = "Func";
                 };
         };
 };
