@@ -149,7 +149,7 @@
 &none &kp SQT    &kp COMMA  &kp DOT     &kp P      &kp Y     &kp F &kp G      &kp C       &kp R      &kp L      &none
 &none &hm LGUI A &hm LALT O &hm LCTRL E &hm LSFT U &kp I     &kp D &hm RSFT H &hm RCTRL T &hm RALT N &hm RGUI S &none
 &none &kp SEMI   &kp Q      &kp J       &kp K      &kp X     &kp B &kp M      &kp W       &kp V      &kp Z      &none
-                     &bh 3 ESQ   &bh 1 SPC     &bh 2 TAB     &bh 5 ENT  &bh 4 BSPC  &bh 6 DEL
+                     &bh NAV ESQ   &bh NAV SPC     &bh NAV TAB     &bh NAV ENT  &bh NAV BSPC  &bh NAV DEL
                         >;
 		label = "Dvorak";
                 };
