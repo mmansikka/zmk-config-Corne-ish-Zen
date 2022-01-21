@@ -168,5 +168,35 @@
                         >;
 		label = "NAVIG";
                 };
+                                mouse_layer {
+// -----------------------------------------------------------------------------------------
+// |    |    |    |    |    ||---||    |    |    |    |    |
+// | GUI| ALT|CTRL|SFT |    ||---||    |    |    |    |    |
+// |    |    |    |    |    ||---||    |    |    |    |    |
+//           |    |    |    ||---||    |    |    |    |    |
+                       bindings = <
+&none &none &none &none &none &none                 &none &none &none &none &none &none
+&none &kp LGUI &kp LALT &kp LCTRL &kp LSFT &none    &none &none &none &none &none &none
+&none &none &none &none &none &none                 &none &none &none &none &none &none
+                  &none &none &trans                &none &none &none
+                        >;
+		label = "Mouse";
+                };
+
+
+                media_layer {
+// -----------------------------------------------------------------------------------------
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+// | GUI| ALT|CTRL|SFT |    ||---||    |    |    |    |    |
+// |    |    |    |    |    ||   ||    |    |    |    |    |
+//           |    |    |    ||   ||    |    |    |    |    |
+                       bindings = <
+&none &none &none &none &none &none                   &none &none &none &none &none &none
+&none &kp LGUI &kp LALT &kp LCTRL &kp LSFT &none      &none &none &none &none &none &none
+&none &none &none &none &none &none                   &none &none &none &none &none &none
+                  &none &none &none                   &none &none &none
+                        >;
+		label = "Media";
+                };
         };
 };
