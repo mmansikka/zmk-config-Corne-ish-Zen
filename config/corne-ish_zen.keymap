@@ -200,12 +200,12 @@
                 };
                 num_layer {
 // -----------------------------------------------------------------------------------------
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |SFT |CTRL|ALT |GUI |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
+// | [ |    |    |    | ] ||   ||    |    |    |    |    |
+// | / |    |    |    |    ||   ||    |SFT |CTRL|ALT |GUI |
+// | ` |    |    |    |    ||   ||    |    |    |    |    |
 //           |    |    |    ||   ||    |    |    |    |    |
                        bindings = <
-&none &none &kp N7 &kp N8 &kp N9 &none     &none &none &none &none &none &none
+&none &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT     &none &none &none &none &none &none
 &none &kp SLASH &kp N4 &kp N5 &kp N6 &none     &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &none
 &none &kp GRAVE &kp N1 &kp N2 &kp N3 &none     &none &none &none &none &none &none
                   &kp DOT &kp N0 &kp MINUS     &none &trans &none
@@ -216,15 +216,15 @@
 
                 symb_layer {
 // -----------------------------------------------------------------------------------------
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |SFT |CTRL|ALT |GUI |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-//           |    |    |    ||   ||    |    |    |    |    |
+// | { |    |    |    | } ||   ||    |    |    |    |    |
+// | ? |    |    |    |    ||   ||    |SFT |CTRL|ALT |GUI |
+// | ~ |    |    |    |    ||   ||    |    |    |    |    |
+//           |  ( |  ) | _ ||   ||    |    |    |    |    |
                        bindings = <
-&none &none &none &none &none &none     &none &none &none &none &none &none
-&none &none &none &none &none &none     &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &none
-&none &none &none &none &none &none     &none &none &none &none &none &none
-                  &none &none &none     &trans &none &none
+&none &kp LBRC &none &none &none &kp RBRC     &none &none &none &none &none &none
+&none &kp QUESTION o &none &none &none &none     &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &none
+&none &kp TILDE &none &none &none &none     &none &none &none &none &none &none
+                  &kp LPAR &kp RPAR &kp UNDER     &trans &none &none
                         >;
 		label = "Symb";
                 };
@@ -232,10 +232,10 @@
 
                 fun_layer {
 // -----------------------------------------------------------------------------------------
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-// |    |    |    |    |    ||   ||    |SFT |CTRL|ALT |GUI |
-// |    |    |    |    |    ||   ||    |    |    |    |    |
-//           |    |    |    ||   ||    |    |    |    |    |
+// | F12 | F7 | F8 | F9 | PRINT SCREEN ||   ||    |    |    |    |    |
+// | F11 | F4 | F5 | F6 | CAPSLOCK     ||   ||    |SFT |CTRL|ALT |GUI |
+// | F10 | F1 | F2 | F3 | SCROLLLOCK   ||   ||    |    |    |    |    |
+//               | MENU | SPACE | TAB  ||   ||    |    |    |    |    |
                        bindings = <
 &none &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN       &none &none     &none     &none    &none    &none
 &none &kp F11 &kp F4 &kp F5 &kp F6 &kp CAPSLOCK    &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &none
